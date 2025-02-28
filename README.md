@@ -1,1 +1,1 @@
-# wanderlust-booking-project
+# wanderlust-web-app
