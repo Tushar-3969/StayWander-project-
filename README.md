@@ -4,7 +4,7 @@ Wanderlust is a full-stack booking platform designed to make travel easy and sea
 Wanderlust is built to help travelers explore new places without hassle. Whether you're looking for a cozy stay or hosting your space, Wanderlust makes the journey smooth and enjoyable!
 
 🛠Tech Stack
->Frontend: HTML, CSS, JavaScript, EJS
->Backend: Node.js, Express.js
->Database: MongoDB
->Tools: Mongoose, Nodemon, Method-Override
+Frontend: HTML, CSS, JavaScript, EJS
+Backend: Node.js, Express.js
+Database: MongoDB
+Tools: Mongoose, Nodemon, Method-Override
