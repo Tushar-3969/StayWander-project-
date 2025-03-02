@@ -5,6 +5,8 @@ const Listing = require("./models/listing.js");
 const port = 8080;
 const path = require("path");
 const methodOverride = require('method-override');
+const ejsMate=require("ejs-mate");
+
 
 main().then(() => {
     console.log("Connection successfully");
@@ -18,6 +20,8 @@ app.set('view engine', 'ejs');
 app.set('views', path.join(__dirname, 'views'));
 app.use(express.urlencoded({ extended: true }));
 app.use(methodOverride('_method'));
+app.engine("ejs", ejsMate);
+app.use(express.static(path.join(__dirname,"/public")));
 
 app.get("/", (req, res) => {
     res.send("hi I am root");
@@ -59,7 +63,7 @@ app.get("/listings/:id/edit", async (req, res) => {
 app.put("/listings/:id", async (req, res) => {
     const { id } = req.params;
     await Listing.findByIdAndUpdate(id, { ...req.body.listing });
-    res.redirect(`/listings/${id}`); // Fixed redirect issue
+    res.redirect(`/listings/${id}`); 
 });
 
 //Delete route
