@@ -5,7 +5,7 @@
         <h3><%= listing.title %></h3>
     </div>
 
-    <div class="card col-6 offset-3 show-card">
+    <div class="card col-6 offset-3 show-card listing-card">
         <img class="card-img-top show-img" src="<%= listing.image %>" alt="Listing_image">
         <div class="card-body">
             <p class="card-text">
@@ -28,16 +28,33 @@
     <div class="col-8 offset-3 mb-3">
         <hr>
         <h4>Leave a Review</h4>
-        <form action="/listings/<%= listing.id %>/reviews" method="POST">
+        <form action="/listings/<%= listing.id %>/reviews" method="POST" novalidate class="needs-validation">
             <div class="mt-3 mb-3">
                 <label for="rating" class="form-label">Rating</label>
                 <input type="range" min="1" max="5" id="rating" name="review[rating]" class="form-range">
             </div>
             <div class="mt-3 mb-3">
                 <label for="comment" class="form-label">Comment</label>
-                <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control"></textarea>
+                <textarea name="review[comment]" id="comment" cols="30" rows="5" class="form-control" required></textarea>
+                <div class="invalid-feedback">Please add some comments for review</div>
             </div>
             <button class="btn btn-outline-dark">Submit</button>
         </form>
+        <hr>
+        <p><b>All Reviews</b></p>
+        <div class="row">
+        <% for( reviews of listing.review ){ %>
+            <div class="card col-5 ms-3 mb-3">
+                <div class="card-body">
+                    <h5 class="card-title">Tushar Pathare</h5>
+                    <p class="card-text"><%= reviews.comment %></p>
+                    <p class="card-text"><%= reviews.rating %> stars</p>
+                </div>
+                <form action="/listings/<%= listing._id %>/reviews/<%= reviews._id%>?_method=DELETE" class="mb-3 ms-3" method="POST">
+                    <button class="btn  btn-sm btn-dark">Delete</button>
+                </form>
+            </div>
+        <% } %>
+        </div>
     </div>
 </div>
