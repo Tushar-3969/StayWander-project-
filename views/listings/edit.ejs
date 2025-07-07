@@ -1,0 +1,45 @@
+
+<% layout("/layouts/boilerplate")%>
+<body>
+    <div class="row">
+        <div class="col-8 offset-2">
+            <h3>Edit Your Listing:</h3>
+            <form method="post" action="/listings/<%= listings.id %>?_method=PUT" >
+                <div class="mb-3">
+                    <label for="title" class="form-label">Title:</label>
+                    <input placeholder="Add a catchy title" value="<%= listings.title%>" name="listing[title]" type="text" class="form-control">
+                </div>
+
+                <div class="mb-3">
+                    <label for="description" class="form-label">Description:</label>
+                    <textarea name="listing[description]" rows="5" cols="20" placeholder="Enter Description" class="form-control"><%= listings.description%></textarea>
+                </div>
+
+                <div class="mb-3">
+                    <label for="image" class="form-label">Image Link:</label>
+                    <input placeholder="Paste Image Link" name="listing[image]" type="text" value="<%= listings.image%>" class="form-control">
+                </div>
+
+                <div class="row">
+                    <div class="mb-3 col-md-4">
+                        <label for="price" class="form-label">Price:</label>
+                        <input placeholder="1200" name="listing[price]" type="number" value="<%= listings.price%>" class="form-control">
+                    </div>
+
+                    <div class="mb-3 col-md-8">
+                        <label for="country" class="form-label">Country:</label>
+                        <input placeholder="India" name="listing[country]" type="text" value="<%= listings.country%>" class="form-control">
+                    </div>
+                </div>
+                
+                <div class="mb-3">
+                    <label for="location" class="form-label">Location:</label>
+                    <input placeholder="Maharashtra" name="listing[location]" type="text" value="<%= listings.location%>" class="form-control">
+                </div>
+
+                <button class="btn btn-dark add-btn">Add</button>
+                <br> <br>
+            </form>
+        </div>
+    </div>
+</body>
