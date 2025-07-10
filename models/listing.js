@@ -5,7 +5,7 @@ const Schema = mongoose.Schema({
         required:true
     },
     description:{
-        type:String
+        type:String,
     },
     image: {
     type: String,
@@ -16,8 +16,7 @@ const Schema = mongoose.Schema({
             : v,
     },
     price:{
-        type:Number,
-        min:1
+        type:Number
     },
     location:{
         type:String
