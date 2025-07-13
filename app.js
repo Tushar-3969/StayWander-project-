@@ -8,7 +8,8 @@ const Listing = require("./models/listing.js")
 const ejsMate = require('ejs-mate');
 const wrapAsync = require("./utils/wrapAsync.js");
 const ExpressError = require("./utils/ExpressError.js");
-const {listingSchema} = require("./validationSchema.js");
+const {listingSchema,reviewSchema} = require("./validationSchema.js");
+const Review = require("./models/review.js");
 
 
 main().then(()=>{
@@ -40,6 +41,16 @@ const validateListing=((req,res,next)=>{
     }
 });
 
+const validateReview = ((req,res,next)=>{
+    let {error} = reviewSchema.validate(req.body);
+    if(error){
+        let errMsg = error.map((el)=>el.message).join(",");
+        throw new ExpressError(404,errMsg)
+    }
+    else{
+        next();
+    }
+});
 
 //Index Route
 app.get("/listings",wrapAsync(async (req,res)=>{
@@ -47,7 +58,7 @@ app.get("/listings",wrapAsync(async (req,res)=>{
     res.render("./listings/index.ejs",{allListings});
 }));
 
-//New Route
+//Create Route
 app.get("/listings/new",(req,res)=>{
     res.render("./listings/new.ejs");
 });
@@ -61,12 +72,12 @@ app.post("/listings",validateListing,wrapAsync(async(req,res,next)=>{
 //Show Route
 app.get("/listings/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
-    let listings = await Listing.findById(id);
+    let listings = await Listing.findById(id).populate("reviews");
     res.render("./listings/show.ejs",{listings});
 }));
 
 //update Route
-app.get("/listings/:id/edit",validateListing,wrapAsync(async(req,res)=>{
+app.get("/listings/:id/edit",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     let listings = await Listing.findById(id);
     res.render("./listings/edit.ejs",{listings});
@@ -83,6 +94,18 @@ app.delete("/listings/:id",wrapAsync(async(req,res)=>{
     let {id}=req.params;
     await Listing.findByIdAndDelete(id);
     res.redirect("/listings");
+}));
+
+//Review Route
+//post route
+app.post("/listings/:id/reviews",validateReview,wrapAsync(async(req,res)=>{
+    let listings = await Listing.findById(req.params.id);
+    let reviews = new Review(req.body.review);
+
+    listings.reviews.push(reviews);
+    await reviews.save();
+    await listings.save();
+    res.redirect(`/listings/${listings._id}`);
 }));
 
 app.get("/",(req,res)=>{
