@@ -1,18 +1,10 @@
 <% layout("/layouts/boilerplate")%>
 <body>
     <div class="row">
-        <h1 class="col-6 offset-3">SignUp on StayWander</h1>
+        <h1 class="col-6 offset-3">Login</h1>
         <div class="col-6 offset-3">
 
-            <form action="/signup" method="post" novalidate class="needs-validation">
-                <div class="mb-3">
-                    <label for="email" class="form-label">Email:</label>
-                    <input placeholder="Please Enter Email" name="email" type="text" class="form-control" required>
-                    <div class="valid-feedback">
-                       looks good!
-                    </div>
-                </div>
-
+            <form action="/login" method="post" novalidate class="needs-validation">
                 <div class="mb-3">
                     <label for="username" class="form-label">Username:</label>
                     <input placeholder="Please Enter Username" name="username" type="text" class="form-control" required>
@@ -28,8 +20,7 @@
                        looks good!
                     </div>
                 </div>
-                <a href="/login" style="text-decoration:none; color: black;">Do you have an account?</a><br>
-                <button class="btn btn-dark">SignUp</button>
+                <button class="btn btn-dark">Login</button>
 
             </form>
 
