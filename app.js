@@ -1,3 +1,7 @@
+if(process.env.NODE_ENV != "production"){
+    require('dotenv').config();
+}
+
 const express = require("express");
 const app = express();
 const port = 8080;
@@ -14,7 +18,6 @@ const flash = require('connect-flash');
 const passport = require("passport");
 const LocalStrategy = require('passport-local');
 const User = require("./models/user.js");
-
 
 main()
 .then(()=>{
