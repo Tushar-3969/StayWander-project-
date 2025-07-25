@@ -1,7 +1,13 @@
 const Listing = require("../models/listing.js");
 
 module.exports.index = async (req,res)=>{
-    let allListings = await Listing.find({});
+    let {category}= req.query;
+    let allListings;
+    if(category){
+        allListings = await Listing.find({category:category});
+    }else{
+        allListings = await Listing.find({});
+    }
     res.render("./listings/index.ejs",{allListings});
 }
 
@@ -15,8 +21,8 @@ module.exports.createListings=async(req,res,next)=>{
     let listings= new Listing(req.body.listing);
     listings.image={url,filename};
     listings.owner=req.user._id;
+    listings.category=req.body.listing.category
     await listings.save();
-    console.log(listings)
     req.flash("success","New Listing Created");
     res.redirect("./listings");
 }

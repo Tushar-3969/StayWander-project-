@@ -31,7 +31,12 @@ const Schema = new mongoose.Schema({
     owner:{
         type: mongoose.Schema.Types.ObjectId,
         ref:'User'
+    },
+    category:{
+        type:String,
+        enum:[ "trending","rooms","iconic-cities","mountains","castles","arctic-pools","campings","farms","arctic","beachfront","luxury"]
     }
+
 });
 
 //mongoose middleware
