@@ -1,9 +1,18 @@
 const Listing = require("../models/listing.js");
 
 module.exports.index = async (req,res)=>{
-    let {category}= req.query;
+    let {category,q}= req.query;
     let allListings;
-    if(category){
+    if(q){
+        allListings=await Listing.find({
+            $or:[
+                {title:{$regex:q,$options:"i"}},
+                {location:{$regex:q,$options:"i"}},
+                {description:{$regex:q,$options:"i"}}
+            ]
+        });
+    }
+    else if(category){
         allListings = await Listing.find({category:category});
     }else{
         allListings = await Listing.find({});

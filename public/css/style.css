@@ -154,3 +154,153 @@ body{
     display: flex;
     align-items: center;
 }
+
+/* search */
+.btn-search{
+    background-color: #fe424d !important;
+    color: white !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+}
+
+.btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-input{
+    border-radius: 25px !important;
+    padding: 0.5rem 12rem 0.5rem 12rem !important;
+    font-size: 1rem !important;
+}
+
+/* Responsive styles for mobile devices */
+@media (max-width: 767px) {
+  body {
+    font-size: 1rem;
+    padding: 0;
+  }
+  .container {
+    padding: 0 0.5rem;
+  }
+  .navbar {
+    height: auto;
+    padding: 0.5rem 1rem;
+  }
+  .fa-compass {
+    font-size: 1.5rem;
+  }
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.5rem 0.8rem;
+  }
+  .f-info {
+    flex-direction: column;
+    height: auto;
+    padding: 1rem 0;
+  }
+  .f-info-socials {
+    margin-bottom: 0.5rem;
+  }
+  .listing-card {
+    margin-bottom: 1.2rem;
+    padding: 0.5rem;
+  }
+  .card-img-top {
+    height: 12rem !important;
+  }
+  .show-img {
+    height: 18vh;
+  }
+  .btns {
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: flex-start;
+  }
+  .show-card {
+    padding-left: 0;
+    padding-right: 0;
+  }
+  #filters {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+    margin-left: 0;
+  }
+  .filter {
+    margin-right: 0;
+    margin-top: 1rem;
+    width: 100%;
+    opacity: 1;
+  }
+  .filter p {
+    font-size: 1rem;
+  }
+  .tax-toggle {
+    margin-left: 0;
+    width: 100%;
+    justify-content: flex-start;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    height: auto;
+  }
+  .btn-search {
+    padding: 0.3rem 1rem !important;
+    font-size: 1rem !important;
+  }
+  .search-input {
+    padding: 0.5rem 1rem 0.5rem 1rem !important;
+    font-size: 1rem !important;
+    width: 100%;
+    min-width: 0;
+  }
+  .row-cols-lg-3, .row-cols-md-3 {
+    --bs-columns: 1;
+  }
+  .col-6, .col-8, .col-5, .col-3, .col-1, .offset-3, .offset-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+  form {
+    width: 100%;
+  }
+}
+
+@media (max-width: 767px) {
+  #filters {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0.5rem 0.5rem;
+    margin-left: 0;
+    width: 100%;
+  }
+  .filter {
+    margin: 0.5rem 0 0.5rem 0;
+    padding: 0.5rem 0;
+    width: 100%;
+    opacity: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.95rem;
+  }
+  .filter i {
+    font-size: 1.2rem;
+    margin-bottom: 0.2rem;
+  }
+  .filter p {
+    font-size: 0.95rem;
+    margin-bottom: 0;
+  }
+  .tax-toggle {
+    grid-column: span 2;
+    margin: 0.5rem 0 0 0;
+    width: 100%;
+    font-size: 0.95rem;
+    padding: 0.5rem;
+    height: auto;
+    justify-content: flex-start;
+  }
+}
