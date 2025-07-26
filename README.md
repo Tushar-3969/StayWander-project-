@@ -123,4 +123,4 @@ StayWander is a full-stack web application inspired by Airbnb, allowing users to
 ISC 
 
 ##🌐 Live Demo
-🔗 StayWander on Render
+🔗 https://staywander-project-1.onrender.com/listings
