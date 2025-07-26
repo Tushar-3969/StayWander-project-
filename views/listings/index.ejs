@@ -1,112 +1,120 @@
 <% layout("/layouts/boilerplate")%>
 
-<div id="filters">
-    <a href="/listings?category=trending">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-fire"></i>
-            </div>
-            <p>Trending</p>
-        </div>
-    </a>
+<div class="filters-container">
+    <!-- Left Arrow -->
+    <button class="nav-arrow nav-arrow-left" id="scrollLeft" aria-label="Scroll left">
+        <i class="fa-solid fa-chevron-left"></i>
+    </button>
+    
+    <!-- Scrollable Filters -->
+    <div class="filters-wrapper">
+        <div id="filters">
+            <a href="/listings?category=trending" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-fire"></i>
+                    </div>
+                    <p>Trending</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=rooms">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-bed"></i>
-            </div>
-            <p>Rooms</p>
-        </div>
-    </a>
+            <a href="/listings?category=rooms" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-bed"></i>
+                    </div>
+                    <p>Rooms</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=iconic-cities">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-mountain-city"></i>
-            </div>
-            <p>Iconic Cities</p>
-        </div>
-    </a>
+            <a href="/listings?category=iconic-cities" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-mountain-city"></i>
+                    </div>
+                    <p>Iconic Cities</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=mountains">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-mountain"></i>
-            </div>
-            <p>Mountains</p>
-        </div>
-    </a>
+            <a href="/listings?category=mountains" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-mountain"></i>
+                    </div>
+                    <p>Mountains</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=castles">
-        <div class="filter">
-            <div>
-                <i class="fa-brands fa-fort-awesome"></i>
-            </div>
-            <p>Castles</p>
-        </div>
-    </a>
+            <a href="/listings?category=campings" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-campground"></i>
+                    </div>
+                    <p>Campings</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=arctic-pools">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-person-swimming"></i>
-            </div>
-            <p>Arctic Pools</p>
-        </div>
-    </a>
+            <a href="/listings?category=farms" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-tractor"></i>
+                    </div>
+                    <p>Farm</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=campings">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-campground"></i>
-            </div>
-            <p>Campings</p>
-        </div>
-    </a>
+            <a href="/listings?category=arctic" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-snowflake"></i>
+                    </div>
+                    <p>Arctic</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=farms">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-cow"></i>
-            </div>
-            <p>Farms</p>
-        </div>
-    </a>
+            <a href="/listings?category=luxury" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-umbrella-beach"></i>
+                    </div>
+                    <p>Luxury</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=arctic">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-snowflake"></i>
-            </div>
-            <p>Arctic</p>
-        </div>
-    </a>
+            <a href="/listings?category=beachfront" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-solid fa-water"></i>
+                    </div>
+                    <p>Beachfront</p>
+                </div>
+            </a>
 
-    <a href="/listings?category=beachfront">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-umbrella-beach"></i>
-            </div>
-            <p>BeachFront</p>
+            <a href="/listings?category=castles" class="filter-link">
+                <div class="filter">
+                    <div class="filter-icon">
+                        <i class="fa-brands fa-fort-awesome"></i>
+                    </div>
+                    <p>Castles</p>
+                </div>
+            </a>
         </div>
-    </a>
+    </div>
+    
+    <!-- Right Arrow -->
+    <button class="nav-arrow nav-arrow-right" id="scrollRight" aria-label="Scroll right">
+        <i class="fa-solid fa-chevron-right"></i>
+    </button>
+</div>
 
-    <a href="/listings?category=luxury">
-        <div class="filter">
-            <div>
-                <i class="fa-solid fa-gem"></i>
-            </div>
-            <p>Luxury</p>
-        </div>
-    </a>
-
+<!-- Tax Toggle (separate from scrollable filters) -->
+<div class="tax-toggle-container">
     <div class="tax-toggle">
         <div class="form-check-reverse form-switch">
             <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
             <label class="form-check-label" for="switchCheckDefault">Display Total After Taxes</label>
         </div>
     </div>
-
 </div>
 
 
