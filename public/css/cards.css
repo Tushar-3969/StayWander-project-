@@ -1,0 +1,58 @@
+/* Listing Cards Styles */
+
+.listing-card{
+    border:none !important;
+    margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    border-radius: 1.2rem !important;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.listing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+}
+
+.card-img-top{
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+    transition: transform 0.3s ease;
+}
+
+.listing-card:hover .card-img-top {
+    transform: scale(1.05);
+}
+
+.card-body{
+    padding: 1rem !important;
+}
+
+.card-text{
+    font-weight: 400 !important;
+    color: #222222;
+    margin-bottom: 0.5rem;
+    line-height: 1.4;
+}
+
+.card-text b {
+    font-size: 1.1rem;
+    color: #333;
+}
+
+.listings-link{
+    text-decoration: none !important;
+}
+
+/* Card Effect */
+.card-img-overlay{
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card-img-overlay:hover{
+    opacity: 0.2 !important;
+    background-color: white;
+}

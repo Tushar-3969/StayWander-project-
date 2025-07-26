@@ -1,0 +1,47 @@
+/* Forms and Input Styles */
+
+/* Search Styles */
+.btn-search{
+    background-color: #fe424d !important;
+    color: white !important;
+    border-radius: 25px !important;
+    padding: 0 1rem 0 1rem !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(254, 66, 77, 0.3);
+}
+
+.btn-search:hover {
+    background-color: #e63946 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(254, 66, 77, 0.4);
+}
+
+.btn-search i{
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-input{
+    border-radius: 25px !important;
+    padding: 0.5rem 12rem 0.5rem 12rem !important;
+    font-size: 1rem !important;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}
+
+/* Form Input Enhancements */
+.form-control, .form-select {
+  border-radius: 12px !important;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #fe424d;
+  box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}

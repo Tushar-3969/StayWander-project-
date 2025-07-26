@@ -1,0 +1,27 @@
+/* Navbar Styles */
+.navbar{
+    height:5rem;
+    background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.fa-compass{
+    color: #fe424d;
+    font-size: 2rem;
+    transition: transform 0.3s ease;
+}
+
+.fa-compass:hover {
+    transform: rotate(45deg);
+}
+
+.nav-link{
+    color:#222222 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fe424d !important;
+}

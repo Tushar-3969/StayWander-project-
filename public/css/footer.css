@@ -1,0 +1,49 @@
+/* Footer Styles */
+
+.f-info-links a{
+    text-decoration: none;
+    color:black;
+}
+
+.f-info-links
+,.f-info-socials,
+.f-info-brand{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.f-info-socials a {
+    text-decoration: none;
+    margin-right: 1.7rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.f-info-socials a:hover {
+    transform: translateY(-2px);
+}
+
+.f-info-socials i{
+    font-size:1.3rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.f-info-socials a:hover i {
+    color: #fe424d;
+}
+
+.f-info-links a:hover{
+    text-decoration: underline;
+}
+
+.f-info{
+    text-align: center;
+    height: 8rem;
+    background-color: #ebebeb;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: space-evenly;
+}

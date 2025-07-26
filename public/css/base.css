@@ -1,0 +1,53 @@
+/* Base styles - Body, Container, General Layout */
+body{
+    font-family: "Plus Jakarta Sans",sans-serif !important;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background-color: #fafafa;
+    line-height: 1.6;
+}
+
+.container{
+    flex: 1;
+}
+
+/* Additional Button Styles for Mobile */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.add-btn, .edit-btn {
+  box-shadow: 0 2px 8px rgba(254, 66, 77, 0.3);
+}
+
+.add-btn:hover, .edit-btn:hover {
+  box-shadow: 0 4px 12px rgba(254, 66, 77, 0.4);
+  transform: translateY(-2px);
+}
+
+/* New Page */
+.add-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+
+/* show page */
+.show-img{
+    height: 30vh;
+}
+.btns{
+    display: flex;
+}
+.edit-btn{
+    background-color: #fe424d !important;
+    border: none !important;
+}
+.show-card{
+    padding-left: 0;
+    padding-right: 0;
+}
