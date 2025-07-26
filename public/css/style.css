@@ -3,6 +3,8 @@ body{
     display: flex;
     flex-direction: column;
     min-height: 100vh;
+    background-color: #fafafa;
+    line-height: 1.6;
 }
 
 .container{
@@ -13,14 +15,28 @@ body{
 .navbar{
     height:5rem;
     background-color: white;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #e0e0e0;
 }
 
 .fa-compass{
     color: #fe424d;
     font-size: 2rem;
+    transition: transform 0.3s ease;
 }
+
+.fa-compass:hover {
+    transform: rotate(45deg);
+}
+
 .nav-link{
     color:#222222 !important;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #fe424d !important;
 }
 
 /* Footer */
@@ -38,9 +54,24 @@ body{
     justify-content: center;
 }
 
-.f-info-socials i{
+.f-info-socials a {
+    text-decoration: none;
     margin-right: 1.7rem;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.f-info-socials a:hover {
+    transform: translateY(-2px);
+}
+
+.f-info-socials i{
     font-size:1.3rem;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.f-info-socials a:hover i {
+    color: #fe424d;
 }
 
 .f-info-links a:hover{
@@ -61,21 +92,42 @@ body{
 .listing-card{
     border:none !important;
     margin-bottom: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background: white;
+    border-radius: 1.2rem !important;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.listing-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
 }
 
 .card-img-top{
     border-radius: 1rem !important;
     width: 100% !important;
     object-fit: cover !important;
+    transition: transform 0.3s ease;
+}
+
+.listing-card:hover .card-img-top {
+    transform: scale(1.05);
 }
 
 .card-body{
-    padding: 0 !important;
+    padding: 1rem !important;
 }
 
 .card-text{
     font-weight: 400 !important;
     color: #222222;
+    margin-bottom: 0.5rem;
+}
+
+.card-text b {
+    font-size: 1.1rem;
+    color: #333;
 }
 
 .listings-link{
@@ -85,6 +137,7 @@ body{
 /* Card Effect */
 .card-img-overlay{
     opacity: 0;
+    transition: opacity 0.3s ease;
 }
 
 .card-img-overlay:hover{
@@ -118,6 +171,11 @@ body{
     display: flex;
     flex-wrap: wrap;
     align-items: center;
+    margin-bottom: 2rem;
+    padding: 1rem 0;
+    background: white;
+    border-radius: 1rem;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
 #filters a{
@@ -128,17 +186,37 @@ body{
 .filter{
     text-align: center;
     margin-right: 2rem;
-    margin-top: 2rem;
-    opacity: 0.5;
+    margin-top: 1rem;
+    opacity: 0.6;
+    padding: 0.8rem;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    min-width: 80px;
 }
 
 .filter:hover{
     opacity: 1;
     cursor: pointer;
+    background-color: #f8f9fa;
+    transform: translateY(-2px);
+}
+
+.filter i {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+    color: #fe424d;
+    transition: transform 0.3s ease;
+}
+
+.filter:hover i {
+    transform: scale(1.1);
 }
 
 .filter p{
-    font-size: 0.8rem;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin: 0;
+    color: #333;
 }
 
 .tax-info{
@@ -146,13 +224,19 @@ body{
 }
 
 .tax-toggle{
-    border: 1px solid black;
+    border: 2px solid #e0e0e0;
     border-radius: 1rem;
     height: 3.5rem;
     padding: 0.8rem;
     margin-left: 5rem;
     display: flex;
     align-items: center;
+    background: white;
+    transition: border-color 0.3s ease;
+}
+
+.tax-toggle:hover {
+    border-color: #fe424d;
 }
 
 /* search */
@@ -161,6 +245,14 @@ body{
     color: white !important;
     border-radius: 25px !important;
     padding: 0 1rem 0 1rem !important;
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 8px rgba(254, 66, 77, 0.3);
+}
+
+.btn-search:hover {
+    background-color: #e63946 !important;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(254, 66, 77, 0.4);
 }
 
 .btn-search i{
@@ -172,6 +264,48 @@ body{
     border-radius: 25px !important;
     padding: 0.5rem 12rem 0.5rem 12rem !important;
     font-size: 1rem !important;
+    border: 2px solid #e0e0e0;
+    transition: border-color 0.3s ease;
+}
+
+.search-input:focus {
+    border-color: #fe424d;
+    box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}
+
+/* Additional Button Styles for Mobile */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-1px);
+}
+
+.add-btn, .edit-btn {
+  box-shadow: 0 2px 8px rgba(254, 66, 77, 0.3);
+}
+
+.add-btn:hover, .edit-btn:hover {
+  box-shadow: 0 4px 12px rgba(254, 66, 77, 0.4);
+  transform: translateY(-2px);
+}
+
+/* Form Input Enhancements */
+.form-control, .form-select {
+  border-radius: 12px !important;
+  border: 2px solid #e0e0e0;
+  transition: all 0.3s ease;
+}
+
+.form-control:focus, .form-select:focus {
+  border-color: #fe424d;
+  box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+}
+
+/* Price styling enhancement */
+.card-text {
+  line-height: 1.4;
 }
 
 /* Responsive styles for mobile devices */
@@ -179,91 +313,175 @@ body{
   body {
     font-size: 1rem;
     padding: 0;
+    background-color: #f8f9fa;
   }
+  
   .container {
-    padding: 0 0.5rem;
+    padding: 0 1rem;
+    margin-top: 1rem;
   }
+  
   .navbar {
     height: auto;
-    padding: 0.5rem 1rem;
+    padding: 1rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
   }
+  
+  .navbar-brand {
+    font-size: 1.25rem;
+  }
+  
   .fa-compass {
-    font-size: 1.5rem;
+    font-size: 1.8rem;
   }
+  
   .nav-link {
-    font-size: 1rem;
-    padding: 0.5rem 0.8rem;
+    font-size: 0.95rem;
+    padding: 0.75rem;
+    border-radius: 8px;
+    margin: 0.2rem 0;
   }
+  
+  .nav-link:hover {
+    background-color: #f8f9fa;
+  }
+  
+  /* Enhanced navbar search for mobile */
+  .navbar-nav form {
+    width: 100%;
+    margin: 0.5rem 0;
+  }
+  
+  .d-flex {
+    flex-direction: column !important;
+    gap: 0.5rem;
+  }
+  
   .f-info {
     flex-direction: column;
     height: auto;
-    padding: 1rem 0;
+    padding: 2rem 1rem;
+    background: linear-gradient(135deg, #ebebeb, #f5f5f5);
   }
+  
   .f-info-socials {
-    margin-bottom: 0.5rem;
+    margin-bottom: 1rem;
   }
+  
+  .f-info-socials i {
+    font-size: 1.5rem;
+    color: #fe424d;
+    transition: transform 0.3s ease;
+  }
+  
+  .f-info-socials i:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Enhanced listing cards for mobile */
   .listing-card {
-    margin-bottom: 1.2rem;
-    padding: 0.5rem;
+    margin-bottom: 1.5rem;
+    padding: 0;
+    border-radius: 1rem !important;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
   }
+  
   .card-img-top {
-    height: 12rem !important;
+    height: 200px !important;
+    border-radius: 1rem 1rem 0 0 !important;
   }
+  
+  .card-body {
+    padding: 1rem !important;
+  }
+  
+  .card-text {
+    font-size: 1rem;
+    line-height: 1.5;
+  }
+  
+  .card-text b {
+    font-size: 1.1rem;
+    color: #222;
+    display: block;
+    margin-bottom: 0.3rem;
+  }
+  
+  /* Show page mobile enhancements */
   .show-img {
-    height: 18vh;
+    height: 250px;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
   }
+  
   .btns {
     flex-direction: column;
-    gap: 0.5rem;
-    align-items: flex-start;
+    gap: 0.75rem;
+    align-items: stretch;
   }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    border-radius: 12px;
+    font-weight: 500;
+  }
+  
   .show-card {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 1rem;
+    border-radius: 1rem;
+    background: white;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
   }
-  #filters {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 0.5rem;
-    margin-left: 0;
-  }
-  .filter {
-    margin-right: 0;
-    margin-top: 1rem;
-    width: 100%;
-    opacity: 1;
-  }
-  .filter p {
-    font-size: 1rem;
-  }
-  .tax-toggle {
-    margin-left: 0;
-    width: 100%;
-    justify-content: flex-start;
-    font-size: 0.95rem;
-    padding: 0.5rem;
-    height: auto;
-  }
+  
+  /* Enhanced search for mobile */
   .btn-search {
-    padding: 0.3rem 1rem !important;
+    padding: 0.75rem 1.5rem !important;
     font-size: 1rem !important;
+    border-radius: 12px !important;
+    width: 100%;
+    margin-top: 0.5rem;
   }
+  
   .search-input {
-    padding: 0.5rem 1rem 0.5rem 1rem !important;
+    padding: 0.75rem 1rem !important;
     font-size: 1rem !important;
     width: 100%;
-    min-width: 0;
+    border-radius: 12px !important;
+    margin-bottom: 0.5rem;
   }
+  
+  /* Grid system adjustments */
   .row-cols-lg-3, .row-cols-md-3 {
     --bs-columns: 1;
   }
+  
   .col-6, .col-8, .col-5, .col-3, .col-1, .offset-3, .offset-5 {
     flex: 0 0 100%;
     max-width: 100%;
     margin-left: 0 !important;
   }
+  
+  /* Form improvements */
   form {
     width: 100%;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 12px;
+  }
+  
+  /* Spacing improvements */
+  .mt-3 {
+    margin-top: 1.5rem !important;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1.5rem !important;
   }
 }
 
