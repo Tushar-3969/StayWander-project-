@@ -1,4 +1,5 @@
 const Listing = require("../models/listing.js");
+const ExpressError = require("../utils/ExpressError.js");
 
 module.exports.index = async (req,res)=>{
     let {category,q}= req.query;
@@ -11,6 +12,9 @@ module.exports.index = async (req,res)=>{
                 {description:{$regex:q,$options:"i"}}
             ]
         });
+        if(allListings==0){
+            throw new ExpressError(404,"No listings available at the moment.")
+        }
     }
     else if(category){
         allListings = await Listing.find({category:category});
