@@ -9,6 +9,9 @@
     overflow: hidden;
     box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     position: relative;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
 }
 
 .listing-card:hover {
@@ -22,6 +25,7 @@
     object-fit: cover !important;
     transition: transform 0.3s ease;
     aspect-ratio: 16/9;
+    flex-shrink: 0;
 }
 
 .listing-card:hover .card-img-top {
@@ -33,6 +37,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    flex: 1;
     min-height: 120px;
 }
 
@@ -89,6 +94,19 @@
     color: #fe424d;
     font-size: 1.1rem;
     margin-top: auto;
+    margin-bottom: 0;
+}
+
+/* Ensure all cards in a row have equal height */
+.row > .col,
+.row > [class*="col-"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.row > .col > .listing-card,
+.row > [class*="col-"] > .listing-card {
+    height: 100%;
 }
 
 /* Mobile responsive enhancements */
@@ -298,8 +316,6 @@
         transform: none;
     }
 }
-
-
 
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
