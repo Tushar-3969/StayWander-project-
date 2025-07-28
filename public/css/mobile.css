@@ -74,20 +74,28 @@
     padding: 0;
     border-radius: 0.8rem !important;
     box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    display: flex;
+    flex-direction: column;
+    height: 100%;
   }
   
   .card-img-top {
     height: 180px !important;
     border-radius: 0.8rem 0.8rem 0 0 !important;
+    object-fit: cover;
   }
   
   .card-body {
     padding: 0.8rem !important;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
   }
   
   .card-text {
     font-size: 0.9rem;
     line-height: 1.4;
+    margin-bottom: 0.5rem;
   }
   
   .card-text b {
@@ -95,6 +103,7 @@
     color: #222;
     display: block;
     margin-bottom: 0.25rem;
+    font-weight: bold;
   }
   
   /* Show page enhancements for extra small */
@@ -302,6 +311,127 @@
   .card {
     margin-bottom: 1rem;
   }
+  
+  /* Review form enhancements for mobile - KEEP CENTERED */
+  .starability-slot {
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0;
+    margin-left: 2rem;
+    margin-right: 0.5rem;
+  }
+  
+  .starability-slot input[type="radio"] {
+    display: none;
+  }
+  
+  .starability-slot label {
+    font-size: 1.5rem;
+    color: #ddd;
+    cursor: pointer;
+    margin: 0 0.2rem;
+    transition: color 0.3s ease;
+    text-indent: -9999px;
+    overflow: hidden;
+  }
+  
+  .starability-slot label:hover,
+  .starability-slot label:hover ~ label,
+  .starability-slot input[type="radio"]:checked ~ label {
+    color: #ffc107;
+  }
+  
+  /* Textarea for mobile - KEEP CENTERED */
+  textarea.form-control {
+    min-height: 120px;
+    font-size: 0.9rem;
+    padding: 0.8rem;
+    border-radius: 8px;
+  }
+  
+  /* Submit button for mobile - KEEP NORMAL */
+  .btn.btn-dark {
+    padding: 0.5rem 1rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    margin-top: 1rem;
+  }
+  
+  /* Review section spacing - KEEP CENTERED */
+  .col-8.offset-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 3rem !important;
+    margin-right: 0.5rem !important;
+    padding: 0 0.75rem;
+    text-align: center;
+  }
+  
+  /* Show page title - KEEP CENTERED */
+  h3 {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+    text-align: center;
+  }
+  
+  /* Center the review form */
+  .col-8.offset-3 form {
+    text-align: center;
+  }
+  
+  .col-8.offset-3 .form-label {
+    text-align: center;
+    display: block;
+  }
+  
+  /* Badge styling for mobile */
+  .badge {
+    font-size: 0.7rem;
+    padding: 0.4rem 0.6rem;
+    border-radius: 6px;
+  }
+  
+  /* Star rating result for mobile */
+  .starability-result {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  /* Review author name */
+  .card-title {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Review comment text */
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  /* Delete button for reviews */
+  .btn-sm {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+    border-radius: 6px;
+  }
+  
+  /* Center cards on mobile */
+  .row {
+    justify-content: center;
+  }
+  
+  .col-6.offset-3 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+    padding: 0 0.75rem;
+  }
+  
+  .listing-card.col-6.offset-3 {
+    margin: 0 auto;
+    max-width: 400px;
+  }
 }
 
 /* Small Devices (landscape phones, 576px and up) */
@@ -319,14 +449,14 @@
   
   /* Navbar Mobile */
   .navbar {
-    height: auto;
-    padding: 1rem;
-    position: sticky;
-    top: 0;
-    z-index: 1000;
-    background: rgba(255, 255, 255, 0.95);
-    backdrop-filter: blur(10px);
-  }
+  height: auto;
+  padding: 1rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+}
 
 .navbar-brand {
   font-size: 1.25rem;
@@ -360,12 +490,12 @@
 }
 
 /* Footer Mobile */
-  .f-info {
-    flex-direction: column;
-    height: auto;
-    padding: 2rem 1rem;
-    background: linear-gradient(135deg, #ebebeb, #f5f5f5);
-  }
+.f-info {
+  flex-direction: column;
+  height: auto;
+  padding: 2rem 1rem;
+  background: linear-gradient(135deg, #ebebeb, #f5f5f5);
+}
 
 .f-info-socials {
   margin-bottom: 1rem;
@@ -481,9 +611,9 @@ form {
   margin-top: 1.5rem !important;
 }
 
-  .mb-3 {
-    margin-bottom: 1.5rem !important;
-  }
+.mb-3 {
+  margin-bottom: 1.5rem !important;
+}
 
 /* Filters container adjustments for mobile */
 .filters-container {
@@ -540,10 +670,10 @@ form {
   box-shadow: 0 2px 8px rgba(0,0,0,0.05);
 }
 
-  .form-check-label {
-    font-size: 0.9rem;
-    font-weight: 500;
-  }
+.form-check-label {
+  font-size: 0.9rem;
+  font-weight: 500;
+}
 
 /* Mobile form enhancements */
 .row {
@@ -571,12 +701,12 @@ form {
 }
 
 /* Mobile Add button */
-  .add-btn {
-    width: 100%;
-    padding: 1rem 1.5rem;
-    font-size: 1.1rem;
-    margin-bottom: 2rem;
-  }
+.add-btn {
+  width: 100%;
+  padding: 1rem 1.5rem;
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+}
 
 /* Mobile alert improvements */
 .alert {
@@ -589,6 +719,110 @@ form {
 .btn-close {
   padding: 0.5rem;
   font-size: 1.2rem;
+}
+
+/* Review form enhancements for small devices - KEEP CENTERED */
+.starability-slot {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0;
+  margin-left: 2rem;
+  margin-right: 0.5rem;
+}
+
+.starability-slot input[type="radio"] {
+  display: none;
+}
+
+.starability-slot label {
+  font-size: 1.8rem;
+  color: #ddd;
+  cursor: pointer;
+  margin: 0 0.3rem;
+  transition: color 0.3s ease;
+  text-indent: -9999px;
+  overflow: hidden;
+}
+
+.starability-slot label:hover,
+.starability-slot label:hover ~ label,
+.starability-slot input[type="radio"]:checked ~ label {
+  color: #ffc107;
+}
+
+/* Textarea for small devices - KEEP CENTERED */
+textarea.form-control {
+  min-height: 120px;
+  font-size: 1rem;
+  padding: 1rem;
+  border-radius: 12px;
+}
+
+/* Submit button for small devices - KEEP NORMAL */
+.btn.btn-dark {
+  padding: 0.6rem 1.2rem;
+  font-size: 0.95rem;
+  border-radius: 12px;
+  margin-top: 1rem;
+}
+
+/* Review section spacing - KEEP CENTERED */
+.col-8.offset-3 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-left: 3rem !important;
+  margin-right: 0.5rem !important;
+  padding: 0 1rem;
+  text-align: center;
+}
+
+/* Show page title - KEEP CENTERED */
+h3 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+/* Center the review form */
+.col-8.offset-3 form {
+  text-align: center;
+}
+
+.col-8.offset-3 .form-label {
+  text-align: center;
+  display: block;
+}
+
+/* Badge styling for small devices */
+.badge {
+  font-size: 0.8rem;
+  padding: 0.5rem 0.7rem;
+  border-radius: 8px;
+}
+
+/* Star rating result for small devices */
+.starability-result {
+  font-size: 1.3rem;
+  margin: 0.5rem 0;
+}
+
+/* Review author name */
+.card-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.5rem;
+}
+
+/* Review comment text */
+.card-text {
+  font-size: 1rem;
+  line-height: 1.4;
+}
+
+/* Delete button for reviews */
+.btn-sm {
+  padding: 0.4rem 0.8rem;
+  font-size: 0.85rem;
+  border-radius: 8px;
 }
 }
 
@@ -662,6 +896,34 @@ form {
   .show-card {
     padding: 1.5rem;
   }
+  
+  /* Review form enhancements for tablets - KEEP CENTERED */
+  .starability-slot label {
+    font-size: 2rem;
+    color: #ddd;
+    cursor: pointer;
+    margin: 0 0.4rem;
+    transition: color 0.3s ease;
+  }
+  
+  .starability-slot label:hover,
+  .starability-slot label:hover ~ label,
+  .starability-slot input[type="radio"]:checked ~ label {
+    color: #ffc107;
+  }
+  
+  /* Textarea for tablets - KEEP CENTERED */
+  textarea.form-control {
+    min-height: 140px;
+    font-size: 1rem;
+    padding: 1.2rem;
+  }
+  
+  /* Submit button for tablets - KEEP NORMAL */
+  .btn.btn-dark {
+    padding: 1rem 2rem;
+    font-size: 1.1rem;
+  }
 }
 
 /* Large Devices (desktops, 992px and up) */
@@ -729,6 +991,34 @@ form {
   
   .show-card {
     padding: 2rem;
+  }
+  
+  /* Review form enhancements for desktop - KEEP CENTERED */
+  .starability-slot label {
+    font-size: 2.2rem;
+    color: #ddd;
+    cursor: pointer;
+    margin: 0 0.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .starability-slot label:hover,
+  .starability-slot label:hover ~ label,
+  .starability-slot input[type="radio"]:checked ~ label {
+    color: #ffc107;
+  }
+  
+  /* Textarea for desktop - KEEP CENTERED */
+  textarea.form-control {
+    min-height: 160px;
+    font-size: 1rem;
+    padding: 1.5rem;
+  }
+  
+  /* Submit button for desktop - KEEP NORMAL */
+  .btn.btn-dark {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
   }
 }
 
@@ -801,6 +1091,34 @@ form {
   
   .show-card {
     padding: 2.5rem;
+  }
+  
+  /* Review form enhancements for large desktop - KEEP CENTERED */
+  .starability-slot label {
+    font-size: 2.5rem;
+    color: #ddd;
+    cursor: pointer;
+    margin: 0 0.6rem;
+    transition: color 0.3s ease;
+  }
+  
+  .starability-slot label:hover,
+  .starability-slot label:hover ~ label,
+  .starability-slot input[type="radio"]:checked ~ label {
+    color: #ffc107;
+  }
+  
+  /* Textarea for large desktop - KEEP CENTERED */
+  textarea.form-control {
+    min-height: 180px;
+    font-size: 1.05rem;
+    padding: 1.8rem;
+  }
+  
+  /* Submit button for large desktop - KEEP NORMAL */
+  .btn.btn-dark {
+    padding: 1.5rem 3rem;
+    font-size: 1.2rem;
   }
 }
 
