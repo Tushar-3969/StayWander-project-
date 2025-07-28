@@ -1,4 +1,4 @@
-/* Forms and Input Styles */
+/* Enhanced Forms and Input Styles */
 
 /* Search Styles */
 .btn-search{
@@ -8,12 +8,19 @@
     padding: 0 1rem 0 1rem !important;
     transition: all 0.3s ease;
     box-shadow: 0 2px 8px rgba(254, 66, 77, 0.3);
+    border: none !important;
+    font-weight: 500;
 }
 
 .btn-search:hover {
     background-color: #e63946 !important;
     transform: translateY(-1px);
     box-shadow: 0 4px 12px rgba(254, 66, 77, 0.4);
+}
+
+.btn-search:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 8px rgba(254, 66, 77, 0.3);
 }
 
 .btn-search i{
@@ -26,22 +33,246 @@
     padding: 0.5rem 12rem 0.5rem 12rem !important;
     font-size: 1rem !important;
     border: 2px solid #e0e0e0;
-    transition: border-color 0.3s ease;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease;
+    background-color: white;
 }
 
 .search-input:focus {
     border-color: #fe424d;
     box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+    outline: none;
 }
 
-/* Form Input Enhancements */
+/* Enhanced Form Input Styles */
 .form-control, .form-select {
   border-radius: 12px !important;
   border: 2px solid #e0e0e0;
   transition: all 0.3s ease;
+  background-color: white;
+  font-size: 1rem;
+  padding: 0.75rem 1rem;
 }
 
 .form-control:focus, .form-select:focus {
   border-color: #fe424d;
   box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+  outline: none;
+}
+
+.form-control:invalid, .form-select:invalid {
+  border-color: #dc3545;
+}
+
+.form-control:valid, .form-select:valid {
+  border-color: #28a745;
+}
+
+/* Enhanced form labels */
+.form-label {
+  font-weight: 500;
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.95rem;
+}
+
+/* Enhanced form groups */
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+/* Enhanced validation feedback */
+.valid-feedback {
+  color: #28a745;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 0.25rem;
+}
+
+/* Enhanced form buttons */
+.btn {
+  border-radius: 12px !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  font-size: 1rem;
+}
+
+.btn:focus {
+  box-shadow: 0 0 0 0.2rem rgba(254, 66, 77, 0.25);
+  outline: none;
+}
+
+/* Mobile responsive enhancements */
+@media (max-width: 767.98px) {
+  .search-input {
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    width: 100%;
+    border-radius: 12px !important;
+  }
+  
+  .btn-search {
+    padding: 0.75rem 1.5rem !important;
+    font-size: 1rem !important;
+    border-radius: 12px !important;
+    width: 100%;
+    margin-top: 0.5rem;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.75rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    min-height: 48px;
+  }
+  
+  .form-label {
+    font-size: 0.9rem;
+    margin-bottom: 0.4rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    border-radius: 12px;
+    width: 100%;
+    margin-bottom: 0.5rem;
+  }
+  
+  .form-group {
+    margin-bottom: 1.2rem;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 575.98px) {
+  .search-input {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+  }
+  
+  .btn-search {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+    min-height: 44px;
+  }
+  
+  .form-label {
+    font-size: 0.85rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+  
+  .form-group {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Tablet enhancements */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .search-input {
+    padding: 0.8rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .btn-search {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.8rem;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+}
+
+/* Desktop enhancements */
+@media (min-width: 992px) {
+  .search-input {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .btn-search {
+    padding: 0.8rem 1.8rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .form-control, .form-select {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.05rem;
+  }
+}
+
+/* Large desktop enhancements */
+@media (min-width: 1200px) {
+  .search-input {
+    padding: 1rem 2rem !important;
+    font-size: 1.05rem !important;
+  }
+  
+  .btn-search {
+    padding: 1rem 2.5rem !important;
+    font-size: 1.05rem !important;
+  }
+  
+  .form-control, .form-select {
+    padding: 1.2rem;
+    font-size: 1.05rem;
+  }
+  
+  .btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+  }
+}
+
+/* Focus states for accessibility */
+.form-control:focus,
+.form-select:focus,
+.btn:focus,
+.search-input:focus {
+  outline: 2px solid #fe424d;
+  outline-offset: 2px;
+}
+
+
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  .form-control,
+  .form-select,
+  .search-input,
+  .btn {
+    transition: none;
+  }
 }

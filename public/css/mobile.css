@@ -1,6 +1,311 @@
-/* Mobile Responsive Styles */
+/* Enhanced Mobile Responsive Styles */
 
-@media (max-width: 767px) {
+/* Extra Small Devices (phones, 576px and down) */
+@media (max-width: 575.98px) {
+  body {
+    font-size: 0.95rem;
+    padding: 0;
+    background-color: #f8f9fa;
+  }
+  
+  .container {
+    padding: 0 0.75rem;
+    margin-top: 0.5rem;
+  }
+  
+  /* Enhanced Navbar for Extra Small */
+  .navbar {
+    height: auto;
+    padding: 0.75rem;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+  }
+  
+  .navbar-brand {
+    font-size: 1.1rem;
+  }
+  
+  .fa-compass {
+    font-size: 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 0.9rem;
+    padding: 0.6rem 0.8rem;
+    border-radius: 8px;
+    margin: 0.15rem 0;
+    text-align: center;
+  }
+  
+  /* Enhanced navbar search for extra small */
+  .navbar-nav form {
+    width: 100%;
+    margin: 0.4rem 0;
+  }
+  
+  .d-flex {
+    flex-direction: column !important;
+    gap: 0.4rem;
+  }
+  
+  /* Enhanced search inputs for extra small */
+  .search-input {
+    padding: 0.6rem 0.8rem !important;
+    font-size: 0.9rem !important;
+    width: 100%;
+    border-radius: 8px !important;
+    margin-bottom: 0.4rem;
+  }
+  
+  .btn-search {
+    padding: 0.6rem 1rem !important;
+    font-size: 0.9rem !important;
+    border-radius: 8px !important;
+    width: 100%;
+    margin-top: 0.4rem;
+  }
+  
+  /* Enhanced listing cards for extra small */
+  .listing-card {
+    margin-bottom: 1rem;
+    padding: 0;
+    border-radius: 0.8rem !important;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+  }
+  
+  .card-img-top {
+    height: 180px !important;
+    border-radius: 0.8rem 0.8rem 0 0 !important;
+  }
+  
+  .card-body {
+    padding: 0.8rem !important;
+  }
+  
+  .card-text {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .card-text b {
+    font-size: 1rem;
+    color: #222;
+    display: block;
+    margin-bottom: 0.25rem;
+  }
+  
+  /* Show page enhancements for extra small */
+  .show-img {
+    height: 200px;
+    border-radius: 0.8rem;
+    margin-bottom: 0.8;
+  }
+  
+  .btns {
+    flex-direction: column;
+    gap: 0.6rem;
+    align-items: stretch;
+  }
+  
+  .btn {
+    padding: 0.6rem 1.2rem;
+    border-radius: 8px;
+    font-weight: 500;
+    font-size: 0.9rem;
+  }
+  
+  .show-card {
+    padding: 0.8rem;
+    border-radius: 0.8rem;
+    background: white;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Grid system adjustments for extra small */
+  .row-cols-lg-3, .row-cols-md-3, .row-cols-sm-2 {
+    --bs-columns: 1;
+  }
+  
+  .col-6, .col-8, .col-5, .col-3, .col-1, .offset-3, .offset-5 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+  }
+  
+  /* Form improvements for extra small */
+  form {
+    width: 100%;
+  }
+  
+  .form-control, .form-select {
+    padding: 0.6rem;
+    font-size: 0.9rem;
+    border-radius: 8px;
+  }
+  
+  /* Spacing improvements for extra small */
+  .mt-3 {
+    margin-top: 1rem !important;
+  }
+  
+  .mb-3 {
+    margin-bottom: 1rem !important;
+  }
+  
+  /* Filters container adjustments for extra small */
+  .filters-container {
+    margin-bottom: 0.8rem;
+    border-radius: 8px;
+    padding: 0.4rem;
+  }
+  
+  /* Navigation arrows for extra small */
+  .nav-arrow {
+    width: 30px;
+    height: 30px;
+    margin: 0 0.4rem;
+  }
+  
+  .nav-arrow i {
+    font-size: 0.7rem;
+  }
+  
+  /* Filters scroll container for extra small */
+  #filters {
+    padding: 0.6rem 0;
+    gap: 0.6rem;
+  }
+  
+  /* Individual filter items for extra small */
+  .filter {
+    min-width: 60px;
+    padding: 0.5rem 0.6rem;
+    opacity: 0.8;
+  }
+  
+  .filter i {
+    font-size: 1rem;
+  }
+  
+  .filter p {
+    font-size: 0.7rem;
+    font-weight: 600;
+  }
+  
+  /* Tax toggle container for extra small */
+  .tax-toggle-container {
+    margin-bottom: 0.8rem;
+    padding: 0 0.75rem;
+  }
+  
+  .tax-toggle {
+    margin-left: 0;
+    border-radius: 8px;
+    padding: 0.5rem 0.8rem;
+    height: auto;
+    font-size: 0.8rem;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.05);
+    min-width: 100%;
+  }
+  
+  .form-check-label {
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+  
+  /* Mobile form enhancements for extra small */
+  .row {
+    margin: 0;
+  }
+  
+  .col-8.offset-2 {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin-left: 0 !important;
+    padding: 0 0.75rem;
+  }
+  
+  /* Mobile category dropdown for extra small */
+  .mb-3.d-flex {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 0.4rem;
+  }
+  
+  .form-control.w-auto {
+    width: 100% !important;
+    min-height: 44px;
+    font-size: 0.9rem;
+  }
+  
+  /* Mobile Add button for extra small */
+  .add-btn {
+    width: 100%;
+    padding: 0.8rem 1.2rem;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Mobile alert improvements for extra small */
+  .alert {
+    border-radius: 8px;
+    padding: 0.8rem;
+    margin-bottom: 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .btn-close {
+    padding: 0.4rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Footer enhancements for extra small */
+  .f-info {
+    flex-direction: column;
+    height: auto;
+    padding: 1.5rem 0.75rem;
+    background: linear-gradient(135deg, #ebebeb, #f5f5f5);
+  }
+  
+  .f-info-socials {
+    margin-bottom: 0.8rem;
+  }
+  
+  .f-info-socials i {
+    font-size: 1.3rem;
+    color: #fe424d;
+    transition: transform 0.3s ease;
+  }
+  
+  .f-info-socials i:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Enhanced touch targets for extra small */
+  .btn, .nav-link, .filter {
+    min-height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Better spacing for extra small */
+  h1, h2, h3, h4, h5, h6 {
+    margin-bottom: 0.8rem;
+  }
+  
+  /* Enhanced card spacing for extra small */
+  .card {
+    margin-bottom: 1rem;
+  }
+}
+
+/* Small Devices (landscape phones, 576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
   body {
     font-size: 1rem;
     padding: 0;
@@ -19,267 +324,537 @@
     position: sticky;
     top: 0;
     z-index: 1000;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
   }
-  
-  .navbar-brand {
-    font-size: 1.25rem;
-  }
-  
-  .fa-compass {
-    font-size: 1.8rem;
-  }
-  
-  .nav-link {
-    font-size: 0.95rem;
-    padding: 0.75rem;
-    border-radius: 8px;
-    margin: 0.2rem 0;
-  }
-  
-  .nav-link:hover {
-    background-color: #f8f9fa;
-  }
-  
-  /* Enhanced navbar search for mobile */
-  .navbar-nav form {
-    width: 100%;
-    margin: 0.5rem 0;
-  }
-  
-  .d-flex {
-    flex-direction: column !important;
-    gap: 0.5rem;
-  }
-  
-  /* Footer Mobile */
+
+.navbar-brand {
+  font-size: 1.25rem;
+}
+
+.fa-compass {
+  font-size: 1.8rem;
+}
+
+.nav-link {
+  font-size: 0.95rem;
+  padding: 0.75rem;
+  border-radius: 8px;
+  margin: 0.2rem 0;
+  text-align: center;
+}
+
+.nav-link:hover {
+  background-color: #f8f9fa;
+}
+
+/* Enhanced navbar search for mobile */
+.navbar-nav form {
+  width: 100%;
+  margin: 0.5rem 0;
+}
+
+.d-flex {
+  flex-direction: column !important;
+  gap: 0.5rem;
+}
+
+/* Footer Mobile */
   .f-info {
     flex-direction: column;
     height: auto;
     padding: 2rem 1rem;
     background: linear-gradient(135deg, #ebebeb, #f5f5f5);
   }
-  
-  .f-info-socials {
-    margin-bottom: 1rem;
-  }
-  
-  .f-info-socials i {
-    font-size: 1.5rem;
-    color: #fe424d;
-    transition: transform 0.3s ease;
-  }
-  
-  .f-info-socials i:hover {
-    transform: scale(1.2);
-  }
-  
-  /* Enhanced listing cards for mobile */
-  .listing-card {
-    margin-bottom: 1.5rem;
-    padding: 0;
-    border-radius: 1rem !important;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-  }
-  
-  .card-img-top {
-    height: 200px !important;
-    border-radius: 1rem 1rem 0 0 !important;
-  }
-  
-  .card-body {
-    padding: 1rem !important;
-  }
-  
-  .card-text {
-    font-size: 1rem;
-    line-height: 1.5;
-  }
-  
-  .card-text b {
-    font-size: 1.1rem;
-    color: #222;
-    display: block;
-    margin-bottom: 0.3rem;
-  }
-  
-  /* Show page mobile enhancements */
-  .show-img {
-    height: 250px;
-    border-radius: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .btns {
-    flex-direction: column;
-    gap: 0.75rem;
-    align-items: stretch;
-  }
-  
-  .btn {
-    padding: 0.75rem 1.5rem;
-    border-radius: 12px;
-    font-weight: 500;
-  }
-  
-  .show-card {
-    padding: 1rem;
-    border-radius: 1rem;
-    background: white;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    margin-bottom: 1rem;
-  }
-  
-  /* Enhanced search for mobile */
-  .btn-search {
-    padding: 0.75rem 1.5rem !important;
-    font-size: 1rem !important;
-    border-radius: 12px !important;
-    width: 100%;
-    margin-top: 0.5rem;
-  }
-  
-  .search-input {
-    padding: 0.75rem 1rem !important;
-    font-size: 1rem !important;
-    width: 100%;
-    border-radius: 12px !important;
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Grid system adjustments */
-  .row-cols-lg-3, .row-cols-md-3 {
-    --bs-columns: 1;
-  }
-  
-  .col-6, .col-8, .col-5, .col-3, .col-1, .offset-3, .offset-5 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-left: 0 !important;
-  }
-  
-  /* Form improvements */
-  form {
-    width: 100%;
-  }
-  
-  .form-control, .form-select {
-    padding: 0.75rem;
-    font-size: 1rem;
-    border-radius: 12px;
-  }
-  
-  /* Spacing improvements */
-  .mt-3 {
-    margin-top: 1.5rem !important;
-  }
-  
+
+.f-info-socials {
+  margin-bottom: 1rem;
+}
+
+.f-info-socials i {
+  font-size: 1.5rem;
+  color: #fe424d;
+  transition: transform 0.3s ease;
+}
+
+.f-info-socials i:hover {
+  transform: scale(1.2);
+}
+
+/* Enhanced listing cards for mobile */
+.listing-card {
+  margin-bottom: 1.5rem;
+  padding: 0;
+  border-radius: 1rem !important;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+ .card-img-top {
+  height: 200px !important;
+  border-radius: 1rem 1rem 0 0 !important;
+}
+
+.card-body {
+  padding: 1rem !important;
+}
+
+.card-text {
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.card-text b {
+  font-size: 1.1rem;
+  color: #222;
+  display: block;
+  margin-bottom: 0.3rem;
+}
+
+/* Show page mobile enhancements */
+.show-img {
+  height: 250px;
+  border-radius: 1rem;
+  margin-bottom: 1rem;
+}
+
+.btns {
+  flex-direction: column;
+  gap: 0.75rem;
+  align-items: stretch;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border-radius: 12px;
+  font-weight: 500;
+}
+
+.show-card {
+  padding: 1rem;
+  border-radius: 1rem;
+  background: white;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  margin-bottom: 1rem;
+}
+
+/* Enhanced search for mobile */
+.btn-search {
+  padding: 0.75rem 1.5rem !important;
+  font-size: 1rem !important;
+  border-radius: 12px !important;
+  width: 100%;
+  margin-top: 0.5rem;
+}
+
+.search-input {
+  padding: 0.75rem 1rem !important;
+  font-size: 1rem !important;
+  width: 100%;
+  border-radius: 12px !important;
+  margin-bottom: 0.5rem;
+}
+
+/* Grid system adjustments */
+.row-cols-lg-3, .row-cols-md-3 {
+  --bs-columns: 1;
+}
+
+.col-6, .col-8, .col-5, .col-3, .col-1, .offset-3, .offset-5 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-left: 0 !important;
+}
+
+/* Form improvements */
+form {
+  width: 100%;
+}
+
+.form-control, .form-select {
+  padding: 0.75rem;
+  font-size: 1rem;
+  border-radius: 12px;
+}
+
+/* Spacing improvements */
+.mt-3 {
+  margin-top: 1.5rem !important;
+}
+
   .mb-3 {
     margin-bottom: 1.5rem !important;
   }
-  
-  /* Filters container adjustments for mobile */
-  .filters-container {
-    margin-bottom: 1rem;
-    border-radius: 12px;
-    padding: 0.5rem;
-  }
-  
-  /* Navigation arrows for mobile */
-  .nav-arrow {
-    width: 35px;
-    height: 35px;
-    margin: 0 0.5rem;
-  }
-  
-  .nav-arrow i {
-    font-size: 0.8rem;
-  }
-  
-  /* Filters scroll container */
-  #filters {
-    padding: 0.75rem 0;
-    gap: 0.75rem;
-  }
-  
-  /* Individual filter items for mobile */
-  .filter {
-    min-width: 70px;
-    padding: 0.6rem 0.8rem;
-    opacity: 0.8;
-  }
-  
-  .filter i {
-    font-size: 1.2rem;
-  }
-  
-  .filter p {
-    font-size: 0.75rem;
-    font-weight: 600;
-  }
-  
-  /* Tax toggle container for mobile */
-  .tax-toggle-container {
-    margin-bottom: 1rem;
-    padding: 0 1rem;
-  }
-  
-  .tax-toggle {
-    margin-left: 0;
-    border-radius: 12px;
-    padding: 0.6rem 1rem;
-    height: auto;
-    font-size: 0.9rem;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  }
-  
+
+/* Filters container adjustments for mobile */
+.filters-container {
+  margin-bottom: 1rem;
+  border-radius: 12px;
+  padding: 0.5rem;
+}
+
+/* Navigation arrows for mobile */
+.nav-arrow {
+  width: 35px;
+  height: 35px;
+  margin: 0 0.5rem;
+}
+
+.nav-arrow i {
+  font-size: 0.8rem;
+}
+
+/* Filters scroll container */
+#filters {
+  padding: 0.75rem 0;
+  gap: 0.75rem;
+}
+
+/* Individual filter items for mobile */
+.filter {
+  min-width: 70px;
+  padding: 0.6rem 0.8rem;
+  opacity: 0.8;
+}
+
+.filter i {
+  font-size: 1.2rem;
+}
+
+.filter p {
+  font-size: 0.75rem;
+  font-weight: 600;
+}
+
+/* Tax toggle container for mobile */
+.tax-toggle-container {
+  margin-bottom: 1rem;
+  padding: 0 1rem;
+}
+
+.tax-toggle {
+  margin-left: 0;
+  border-radius: 12px;
+  padding: 0.6rem 1rem;
+  height: auto;
+  font-size: 0.9rem;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
   .form-check-label {
     font-size: 0.9rem;
     font-weight: 500;
   }
-  
-  /* Mobile form enhancements */
-  .row {
-    margin: 0;
-  }
-  
-  .col-8.offset-2 {
-    flex: 0 0 100%;
-    max-width: 100%;
-    margin-left: 0 !important;
-    padding: 0 1rem;
-  }
-  
-  /* Mobile category dropdown */
-  .mb-3.d-flex {
-    flex-direction: column !important;
-    align-items: flex-start !important;
-    gap: 0.5rem;
-  }
-  
-  .form-control.w-auto {
-    width: 100% !important;
-    min-height: 48px;
-    font-size: 1rem;
-  }
-  
-  /* Mobile Add button */
+
+/* Mobile form enhancements */
+.row {
+  margin: 0;
+}
+
+.col-8.offset-2 {
+  flex: 0 0 100%;
+  max-width: 100%;
+  margin-left: 0 !important;
+  padding: 0 1rem;
+}
+
+/* Mobile category dropdown */
+.mb-3.d-flex {
+  flex-direction: column !important;
+  align-items: flex-start !important;
+  gap: 0.5rem;
+}
+
+.form-control.w-auto {
+  width: 100% !important;
+  min-height: 48px;
+  font-size: 1rem;
+}
+
+/* Mobile Add button */
   .add-btn {
     width: 100%;
     padding: 1rem 1.5rem;
     font-size: 1.1rem;
     margin-bottom: 2rem;
   }
+
+/* Mobile alert improvements */
+.alert {
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+}
+
+.btn-close {
+  padding: 0.5rem;
+  font-size: 1.2rem;
+}
+}
+
+/* Medium Devices (tablets, 768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .container {
+    padding: 0 1.5rem;
+  }
   
-  /* Mobile alert improvements */
-  .alert {
-    border-radius: 12px;
-    padding: 1rem;
-    margin-bottom: 1rem;
+  /* Enhanced navbar for tablets */
+  .navbar {
+    padding: 0.8rem 1.5rem;
+  }
+  
+  .nav-link {
+    font-size: 1rem;
+    padding: 0.8rem 1rem;
+  }
+  
+  /* Enhanced search for tablets */
+  .search-input {
+    padding: 0.8rem 1.2rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .btn-search {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Enhanced cards for tablets */
+  .listing-card {
+    margin-bottom: 1.8rem;
+  }
+  
+  .card-img-top {
+    height: 220px !important;
+  }
+  
+  /* Enhanced filters for tablets */
+  .filter {
+    min-width: 85px;
+    padding: 0.8rem 1rem;
+  }
+  
+  .filter i {
+    font-size: 1.3rem;
+  }
+  
+  .filter p {
+    font-size: 0.8rem;
+  }
+  
+  /* Enhanced forms for tablets */
+  .form-control, .form-select {
+    padding: 0.8rem;
     font-size: 1rem;
   }
   
-  .btn-close {
-    padding: 0.5rem;
-    font-size: 1.2rem;
+  /* Enhanced buttons for tablets */
+  .btn {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+  }
+  
+  /* Enhanced show page for tablets */
+  .show-img {
+    height: 300px;
+  }
+  
+  .show-card {
+    padding: 1.5rem;
   }
 }
+
+/* Large Devices (desktops, 992px and up) */
+@media (min-width: 992px) {
+  /* Enhanced navbar for desktop */
+  .navbar {
+    padding: 1rem 2rem;
+  }
+  
+  .nav-link {
+    font-size: 1.05rem;
+    padding: 0.8rem 1.2rem;
+  }
+  
+  /* Enhanced search for desktop */
+  .search-input {
+    padding: 0.8rem 1.5rem !important;
+    font-size: 1rem !important;
+  }
+  
+  .btn-search {
+    padding: 0.8rem 1.8rem !important;
+    font-size: 1rem !important;
+  }
+  
+  /* Enhanced cards for desktop */
+  .listing-card {
+    margin-bottom: 2rem;
+  }
+  
+  .card-img-top {
+    height: 250px !important;
+  }
+  
+  /* Enhanced filters for desktop */
+  .filter {
+    min-width: 90px;
+    padding: 1rem 1.2rem;
+  }
+  
+  .filter i {
+    font-size: 1.4rem;
+  }
+  
+  .filter p {
+    font-size: 0.85rem;
+  }
+  
+  /* Enhanced forms for desktop */
+  .form-control, .form-select {
+    padding: 1rem;
+    font-size: 1rem;
+  }
+  
+  /* Enhanced buttons for desktop */
+  .btn {
+    padding: 1rem 2rem;
+    font-size: 1.05rem;
+  }
+  
+  /* Enhanced show page for desktop */
+  .show-img {
+    height: 350px;
+  }
+  
+  .show-card {
+    padding: 2rem;
+  }
+}
+
+/* Extra Large Devices (large desktops, 1200px and up) */
+@media (min-width: 1200px) {
+  .container {
+    max-width: 1140px;
+  }
+  
+  /* Enhanced navbar for large desktop */
+  .navbar {
+    padding: 1.2rem 3rem;
+  }
+  
+  .nav-link {
+    font-size: 1.1rem;
+    padding: 1rem 1.5rem;
+  }
+  
+  /* Enhanced search for large desktop */
+  .search-input {
+    padding: 1rem 2rem !important;
+    font-size: 1.05rem !important;
+  }
+  
+  .btn-search {
+    padding: 1rem 2.5rem !important;
+    font-size: 1.05rem !important;
+  }
+  
+  /* Enhanced cards for large desktop */
+  .listing-card {
+    margin-bottom: 2.5rem;
+  }
+  
+  .card-img-top {
+    height: 280px !important;
+  }
+  
+  /* Enhanced filters for large desktop */
+  .filter {
+    min-width: 100px;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .filter i {
+    font-size: 1.5rem;
+  }
+  
+  .filter p {
+    font-size: 0.9rem;
+  }
+  
+  /* Enhanced forms for large desktop */
+  .form-control, .form-select {
+    padding: 1.2rem;
+    font-size: 1.05rem;
+  }
+  
+  /* Enhanced buttons for large desktop */
+  .btn {
+    padding: 1.2rem 2.5rem;
+    font-size: 1.1rem;
+  }
+  
+  /* Enhanced show page for large desktop */
+  .show-img {
+    height: 400px;
+  }
+  
+  .show-card {
+    padding: 2.5rem;
+  }
+}
+
+/* Landscape orientation adjustments */
+@media (orientation: landscape) and (max-height: 500px) {
+  .navbar {
+    padding: 0.5rem 1rem;
+  }
+  
+  .container {
+    margin-top: 0.5rem;
+  }
+  
+  .show-img {
+    height: 200px;
+  }
+  
+  .card-img-top {
+    height: 150px !important;
+  }
+  
+  .filters-container {
+    margin-bottom: 0.5rem;
+  }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+  .card-img-top,
+  .show-img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+  }
+}
+
+/* Reduced motion for accessibility */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+  
+  .listing-card:hover {
+    transform: none;
+  }
+  
+  .nav-link:hover {
+    transform: none;
+  }
+  
+  .filter:hover {
+    transform: none;
+  }
+}
+
+
